@@ -1,7 +1,7 @@
 echo off
 
 echo "********************************************************************************************"
-echo "INIT OF THE NEW VPS"
+echo "1 : INIT OF THE NEW VPS"
 (
 echo $URL_SERVER = "https://server.lutily.fr:8443"
 echo write-host "THE MONITORING SERVER IS ON URL: $URL_SERVER" 
