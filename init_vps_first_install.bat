@@ -9,6 +9,7 @@ echo write-host "THE MONITORING SERVER IS ON URL: $URL_SERVER"
 echo $IP_SERVER = "http://whatismyip.akamai.com/"
 echo $MY_IP = Invoke-WebRequest -Uri $IP_SERVER -Method GET 
 echo write-host "YOUR IP IS : $MY_IP" 
+echo $USERNAME = read-host "Enter your unique username in monitoring server -> telegram first name?"
 echo write-host "Your username is : $USERNAME"  
 echo $USERNAME >> username.txt
 echo write-host "REGISTER NEW IP SERVER IN MONITORING TOOL"
