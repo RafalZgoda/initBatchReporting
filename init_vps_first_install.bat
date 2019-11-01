@@ -1,7 +1,7 @@
 echo off
 
 echo "********************************************************************************************"
-echo "1) INIT OF THE NEW VPS"
+echo "11 INIT OF THE NEW VPS"
 (
 echo if (!(Test-Path "username.txt")) {
 echo $URL_SERVER = "https://server.lutily.fr:8443"
