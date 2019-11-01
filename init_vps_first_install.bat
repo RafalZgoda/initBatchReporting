@@ -11,7 +11,7 @@ echo $MY_IP = Invoke-WebRequest -Uri $IP_SERVER -Method GET
 echo write-host "YOUR IP IS : $MY_IP" 
 echo $USERNAME = read-host "Enter your unique username in monitoring server -> telegram first name?"
 echo write-host "Your username is : $USERNAME"  
-echo $USERNAME >> username.txt
+echo Add-Content username.txt  $USERNAME
 echo write-host "REGISTER NEW IP SERVER IN MONITORING TOOL"
 echo $URL_SET_SERVER = $URL_SERVER + "/users/server/" + $USERNAME  
 echo $postParams = @{ip = $MY_IP }  
