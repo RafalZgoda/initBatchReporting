@@ -1,9 +1,9 @@
 echo off
 
 echo "********************************************************************************************"
-echo "121 INIT OF THE NEW VPS"
+echo "1 INIT OF THE NEW VPS"
+echo if (!(Test-Path "username.txt")) { > registerNewServer.ps1
 (
-echo if (!(Test-Path "username.txt")) {
 echo $URL_SERVER = "https://server.lutily.fr:8443"
 echo write-host "THE MONITORING SERVER IS ON URL: $URL_SERVER" 
 echo $IP_SERVER = "http://whatismyip.akamai.com/"
@@ -17,7 +17,7 @@ echo $postParams = @{ip = $MY_IP }
 echo $STORE_RESULT = Invoke-WebRequest -Uri $URL_SET_SERVER -Method POST -Body $postParams  
 echo write-host "Request result : $STORE_RESULT" 
 echo }
-) > registerNewServer.ps1
+) >> registerNewServer.ps1
 
 Powershell.exe -executionpolicy remotesigned -File registerNewServer.ps1
 
