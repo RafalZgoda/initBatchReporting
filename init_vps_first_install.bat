@@ -1,7 +1,7 @@
 echo off
 
 echo "********************************************************************************************"
-echo "1. : INIT OF THE NEW VPS"
+echo "1) INIT OF THE NEW VPS"
 (
 echo if (!(Test-Path "username.txt")) {
 echo $URL_SERVER = "https://server.lutily.fr:8443"
@@ -10,7 +10,7 @@ echo $IP_SERVER = "http://whatismyip.akamai.com/"
 echo $MY_IP = Invoke-WebRequest -Uri $IP_SERVER -Method GET 
 echo write-host "YOUR IP IS : $MY_IP" 
 echo write-host "Your username is : $USERNAME"  
-echo $USERNAME > username.txt
+echo $USERNAME >> username.txt
 echo write-host "REGISTER NEW IP SERVER IN MONITORING TOOL"
 echo $URL_SET_SERVER = $URL_SERVER + "/users/server/" + $USERNAME  
 echo $postParams = @{ip = $MY_IP }  
